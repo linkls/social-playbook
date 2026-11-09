@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#FAF7F2">
+<title>社交相处说明书 · 8 类人格的相处指南</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+html,body{background:#F1EAE1}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",sans-serif;
+  color:#33403D;font-size:16px;line-height:1.72;-webkit-font-smoothing:antialiased}
+
+/* ---------- 布局 ---------- */
+.wrap{max-width:430px;margin:0 auto;background:#FAF7F2;min-height:100vh;box-shadow:0 0 60px rgba(80,90,84,.08)}
+@media(min-width:900px){
+  .wrap{max-width:1060px;display:flex;align-items:flex-start;background:#FAF7F2;padding:0}
+  .side{width:266px;flex:0 0 266px;position:sticky;top:0;height:100vh;overflow-y:auto;background:#F5EFE7;border-right:1px solid #EAE1D5;padding:26px 16px 40px}
+  .main{flex:1;min-width:0;padding:0 34px 70px}
+  .mobilenav{display:none}
+  .topbar{display:block !important}
+}
+.main{padding:0 20px 70px}
+.side{display:none}
+.mobilenav{display:block;position:sticky;top:0;z-index:30;background:rgba(250,247,242,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid #EFE8DF;padding:10px 0 9px}
+.mobilenav .mrow{display:flex;gap:7px;overflow-x:auto;padding:0 16px;-webkit-overflow-scrolling:touch}
+.mobilenav .mrow::-webkit-scrollbar{display:none}
+.mchip{flex:0 0 auto;white-space:nowrap;font-size:12px;font-weight:700;color:#6B7A76;border:1px solid #EAE1D5;
+  background:#fff;border-radius:999px;padding:5px 12px;text-decoration:none}
+.mchip.on{background:#4E8C84;border-color:#4E8C84;color:#fff}
+
+/* ---------- 通用 ---------- */
+.eyebrow{font-size:12px;letter-spacing:.18em;color:#9AA8A4;font-weight:600}
+.h1{font-size:28px;line-height:1.3;font-weight:800;letter-spacing:-.01em}
+.lede{color:#63736F;font-size:14.5px}
+.tag{display:inline-block;padding:4px 11px;border-radius:999px;font-size:12px;font-weight:700;background:#EAF3F0;color:#4E8C84}
+.tag.a{background:#FBEADC;color:#B46B3C}.tag.c{background:#ECE9F7;color:#6E65A8}
+.tag.d{background:#E3ECF5;color:#4B7196}
+.muted{color:#8C9A96;font-size:12.5px;line-height:1.8}
+.card{background:#fff;border-radius:22px;padding:20px 18px;box-shadow:0 6px 22px rgba(74,90,84,.07)}
+.rule{height:1px;background:#EFE8DF;margin:22px 0}
+.kicker{font-size:12px;letter-spacing:.16em;color:#9AA8A4;font-weight:700}
+
+/* ---------- 封面 ---------- */
+.cover{padding:40px 0 10px}
+.cover .h1{margin:12px 0 10px}
+.cover .lede{margin:0 0 16px}
+.cover .chips{display:flex;flex-wrap:wrap;gap:8px;margin:0}
+.chip{background:#fff;border:1px solid #EEE5DA;border-radius:999px;padding:6px 13px;font-size:12.5px;color:#5C6B67;font-weight:600}
+.topbar{display:none}
+
+/* ---------- 目录（侧栏） ---------- */
+.side .st{font-size:12px;letter-spacing:.16em;color:#9AA8A4;font-weight:700;margin:0 6px 14px}
+.side .sp{font-size:12.5px;font-weight:800;color:#33403D;margin:20px 6px 8px;display:flex;align-items:center;gap:7px}
+.side .sp .n{width:20px;height:20px;border-radius:7px;background:#EDE5DA;color:#8C9A96;font-size:11px;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+.side a{list-style:none;text-decoration:none;display:flex;align-items:center;gap:8px;font-size:13px;color:#6B7A76;
+  padding:7px 10px;border-radius:10px;line-height:1.5}
+.side a:hover{background:#EFE7DC}
+.side a .st2{flex:0 0 auto;font-size:10px;font-weight:800;color:#fff;background:#71B0A4;border-radius:5px;padding:1px 5px}
+.side a .st3{flex:0 0 auto;font-size:10px;font-weight:700;color:#B0B8B4;border:1px solid #E3DCD2;border-radius:5px;padding:1px 5px}
+.side a.open{color:#33403D;font-weight:700;background:#fff;box-shadow:0 3px 10px rgba(74,90,84,.06)}
+
+/* ---------- 8 类人格 ---------- */
+.types{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+@media(min-width:900px){.types{grid-template-columns:repeat(4,1fr)}}
+.tcard{background:#fff;border-radius:16px;padding:13px 13px;box-shadow:0 4px 14px rgba(74,90,84,.06);border-left:3px solid #71B0A4}
+.tcard.b1{border-left-color:#E9A178}.tcard.b2{border-left-color:#8E86C4}.tcard.b3{border-left-color:#5B7FA6}.tcard.b4{border-left-color:#C9A15E}
+.tcard .tn{font-size:14px;font-weight:800;line-height:1.4}
+.tcard .td{font-size:12px;color:#8C9A96;margin-top:5px;line-height:1.65}
+
+/* ---------- 速查表 ---------- */
+.qtwrap{background:#fff;border-radius:22px;padding:16px 12px 12px;box-shadow:0 6px 22px rgba(74,90,84,.07);margin-top:14px}
+.qt{width:100%;border-collapse:collapse;table-layout:fixed}
+.qt th,.qt td{border-bottom:1px dashed #EFE8DF;padding:9px 7px;vertical-align:top;text-align:left;font-size:11.5px;line-height:1.6}
+.qt th{font-size:11.5px;color:#8C9A96;font-weight:800}
+.qt tr:last-child td{border-bottom:0}
+.qt .pn{font-weight:800;color:#33403D;font-size:12px}
+.qt .sg{color:#8C9A96}
+.qt .ans{color:#4B5C58;font-weight:600}
+.qt th:nth-child(1),.qt td:nth-child(1){width:74px}
+.qt th:nth-child(2),.qt td:nth-child(2){width:82px}
+
+/* ---------- 章节 ---------- */
+.part{margin:38px 0 0}
+.part-h{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.part-h .pn{width:30px;height:30px;border-radius:10px;background:#4E8C84;color:#fff;font-size:13px;font-weight:800;
+  display:flex;align-items:center;justify-content:center}
+.part-h .pt{font-size:18px;font-weight:800}
+.part-sub{color:#9AA8A4;font-size:12.5px;margin:0 0 16px 40px}
+.ch{background:#fff;border-radius:24px;padding:22px 18px;box-shadow:0 8px 26px rgba(74,90,84,.08);margin-bottom:16px;scroll-margin-top:64px}
+.ch .ck{font-size:11.5px;letter-spacing:.1em;color:#B0895F;font-weight:800}
+.ch .ct{font-size:21px;font-weight:800;line-height:1.4;margin:7px 0 4px}
+.ch .cs{font-size:13px;color:#9AA8A4;margin-bottom:6px}
+.blk{margin-top:18px;padding-top:16px;border-top:1px dashed #EFE8DF}
+.blk:first-of-type{border-top:0;padding-top:4px}
+.lbl{display:flex;align-items:center;gap:8px;font-size:14.5px;font-weight:800;margin-bottom:11px}
+.lbl .n{width:22px;height:22px;border-radius:8px;background:#EAF3F0;color:#4E8C84;font-size:12px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;flex:0 0 auto}
+.blk p{font-size:14.5px;line-height:1.78;color:#4B5C58;margin-bottom:9px}
+.blk p:last-child{margin-bottom:0}
+.blk ul{list-style:none}
+.blk li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;line-height:1.75;color:#4B5C58;padding:5px 0}
+.blk li .d{flex:0 0 6px;width:6px;height:6px;border-radius:50%;background:#9CC4BC;margin-top:11px}
+.blk li b{color:#33403D}
+.say{display:flex;gap:12px;align-items:flex-start;background:#FAF7F2;border:1px solid #EFE7DC;border-radius:16px;padding:14px 15px;margin-bottom:10px}
+.say .sn{flex:0 0 auto;width:22px;height:22px;border-radius:8px;background:#71B0A4;color:#fff;font-size:12px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;margin-top:3px}
+.say .st{flex:1}
+.say .st .sh{font-size:12px;font-weight:800;color:#B0895F;margin-bottom:4px;letter-spacing:.02em}
+.say .st .sq{font-size:15px;line-height:1.78;color:#33403D}
+.say .st .sn2{font-size:12.5px;color:#9AA8A4;margin-top:6px}
+.say.b2 .sn{background:#E9A178}.say.b3 .sn{background:#8E86C4}
+.prac{background:#EAF4F1;border-radius:18px;padding:16px 15px;margin-top:16px}
+.prac .lbl .n{background:#4E8C84;color:#fff}
+.prac li .d{background:#71B0A4}
+.prac .lbl{color:#2F5F59}
+.prac p,.prac li{color:#3B5B57}
+.next{margin-top:14px;background:#FBEADC;border-radius:16px;padding:14px 15px}
+.next .lbl .n{background:#E9A178;color:#fff}
+.next .lbl{color:#8A5A2E}
+.next p{color:#6B4B2C}
+.chfoot{display:flex;gap:10px;margin-top:16px}
+.chfoot .rbtn{flex:1;text-align:center;padding:12px;border:0;border-radius:14px;font-size:14px;font-weight:800;cursor:pointer;font-family:inherit;
+  background:#fff;border:1px solid #E9E1D6;color:#6B7A76;text-decoration:none}
+
+.tbd{background:#FBF7F0;border:1px dashed #E3DCD2;border-radius:20px;padding:20px 18px;margin-bottom:14px}
+.tbd .tt{font-size:16px;font-weight:800;color:#8C9A96}
+.tbd .td{font-size:13px;color:#A5AFA9;margin-top:7px;line-height:1.75}
+.tbd .td b{color:#7C8B87}
+
+.foot{text-align:center;color:#B0B8B4;font-size:11.5px;line-height:1.9;margin-top:34px;padding-top:20px;border-top:1px dashed #EFE8DF}
+.toast{position:fixed;left:50%;bottom:40px;transform:translateX(-50%) translateY(20px);background:rgba(40,52,49,.93);
+  color:#fff;padding:11px 20px;border-radius:14px;font-size:14px;opacity:0;pointer-events:none;transition:all .28s ease;z-index:99}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- ==================== 侧栏目录 ==================== -->
+<aside class="side">
+  <div class="st">CONTENTS</div>
+  <div class="sp"><span class="n">1</span>开口表达</div>
+  <a href="#c1"><span class="st2">本期</span>01 甩手掌柜型怎么接</a>
+  <a href="#t2"><span class="st3">框架</span>02 客气疏远型怎么聊</a>
+  <a href="#t3"><span class="st3">框架</span>03 开口前的三句话</a>
+  <div class="sp"><span class="n">2</span>日常协作</div>
+  <a href="#t4"><span class="st3">框架</span>04 先开口型怎么应</a>
+  <a href="#t5"><span class="st3">框架</span>05 抬杠辩论型怎么接</a>
+  <a href="#t6"><span class="st3">框架</span>06 对齐与回话节奏</a>
+  <div class="sp"><span class="n">3</span>守住边界</div>
+  <a href="#c7"><span class="st2">本期</span>07 越界熟人型怎么挡</a>
+  <a href="#c8"><span class="st2">本期</span>08 借力朋友型怎么拒</a>
+  <a href="#t9"><span class="st3">框架</span>09 拒绝之后的收尾</a>
+  <div class="sp"><span class="n">4</span>遇到分歧</div>
+  <a href="#t10"><span class="st3">框架</span>10 沉默回应型怎么追</a>
+  <a href="#t11"><span class="st3">框架</span>11 情绪表达型怎么接</a>
+  <a href="#t12"><span class="st3">框架</span>12 分歧之后的复盘</a>
+  <div class="sp"><span class="n">★</span>速查与说明</div>
+  <a href="#types">8 类人格一览</a>
+  <a href="#quick">场景速查表</a>
+  <a href="#howto">怎么用这本手册</a>
+</aside>
+
+<div class="main">
+
+<!-- ==================== 移动端顶栏 ==================== -->
+<div class="mobilenav">
+  <div class="mrow">
+    <a class="mchip on" href="#top">封面</a>
+    <a class="mchip" href="#types">8 类人格</a>
+    <a class="mchip" href="#quick">速查表</a>
+    <a class="mchip" href="#c1">01 甩手掌柜型</a>
+    <a class="mchip" href="#c7">07 越界熟人型</a>
+    <a class="mchip" href="#c8">08 借力朋友型</a>
+    <a class="mchip" href="#howto">怎么用</a>
+  </div>
+</div>
+
+<!-- ==================== 封面 ==================== -->
+<section id="top" class="cover">
+  <div class="eyebrow">SOCIAL PLAYBOOK</div>
+  <h1 class="h1">社交相处说明书</h1>
+  <p class="lede">8 类人格的相处指南 —— 先判断，再开口。<br>遇到难搞的人之前，先知道对方是哪一类。</p>
+  <div class="chips">
+    <span class="chip">4 部分 12 节</span>
+    <span class="chip">本期开放 3 节正文</span>
+    <span class="chip">1 张场景速查表</span>
+    <span class="chip">每节配 1 个练习</span>
+  </div>
+</section>
+
+<div class="card" style="margin-top:18px">
+  <div class="kicker">怎么用这本手册</div>
+  <p style="font-size:14.5px;color:#4B5C58;line-height:1.8;margin-top:8px">
+    人和人的麻烦，大多是「类型错配」：你以为对方在讲道理，对方在争面子；你以为对方想帮忙，对方在卸责任。
+    这本手册把人分成 8 类，每一类给出识别信号和应对顺序。<br><br>
+    全书共 4 部分 12 节，<b>本期开放 3 节正文</b>（01 / 07 / 08），其余章节目录已列出，标注为「框架」。
+    每节正文的结构都一样：<b>场景 → 先判断什么 → 三种具体说法 → 对方继续劝说怎么回 → 今天能完成的小练习</b>。
+  </p>
+  <div class="rule"></div>
+  <p class="muted">手册是自我观察与沟通参考工具，不构成专业心理评估、诊断或医疗建议。遇到涉及人身安全、暴力或严重冲突的情况，请联系专业机构。</p>
+</div>
+
+<div class="rule"></div>
+
+<!-- ==================== 8 类人格 ==================== -->
+<section id="types">
+  <h2 class="h2" style="font-size:18px;font-weight:800;margin:0 0 4px">8 类人格一览</h2>
+  <p class="muted" style="margin-bottom:6px">先认人，再选说法。下面 8 类覆盖了日常里 8 种常见的关系位置。</p>
+  <div class="types">
+    <div class="tcard"><div class="tn">甩手掌柜型</div><div class="td">把自己的活推过来，语气轻松，好像本来就该你做。</div></div>
+    <div class="tcard b1"><div class="tn">客气疏远型</div><div class="td">客气到让你以为进展顺利，其实事情一直没往前走。</div></div>
+    <div class="tcard b2"><div class="tn">先开口型</div><div class="td">一上来就提需求和期限，先说事，再问你能不能做。</div></div>
+    <div class="tcard b3"><div class="tn">抬杠辩论型</div><div class="td">什么都想辩一句，辩赢了就过，并不太在意你的感受。</div></div>
+    <div class="tcard b4"><div class="tn">越界熟人型</div><div class="td">以熟人为名，打听你并不想说的事。</div></div>
+    <div class="tcard"><div class="tn">借力朋友型</div><div class="td">关系是真的，事也是真的，只是时间点或金额对不上。</div></div>
+    <div class="tcard b1"><div class="tn">沉默回应型</div><div class="td">你发了消息，对话就停在那里，没有下文。</div></div>
+    <div class="tcard b2"><div class="tn">情绪表达型</div><div class="td">情绪先到，道理后到，先要你回应，再谈事情。</div></div>
+  </div>
+</section>
+
+<!-- ==================== 场景速查表 ==================== -->
+<section id="quick" style="margin-top:30px">
+  <h2 style="font-size:18px;font-weight:800;margin:0 0 4px">场景速查表</h2>
+  <p class="muted" style="margin-bottom:6px">来不及读整节时，看这张表：认出类型 → 用一句话 → 需要时升级动作。</p>
+  <div class="qtwrap">
+    <table class="qt">
+      <thead>
+        <tr><th>人格</th><th>识别信号</th><th>一句话应对</th><th>升级动作</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="pn">甩手掌柜型</td><td class="sg">「你顺手帮我」</td><td class="ans">这块按分工归你</td><td class="sg">说清时间与交付</td></tr>
+        <tr><td class="pn">客气疏远型</td><td class="sg">「回头再说」</td><td class="ans">我先按这个推进</td><td class="sg">设一个明确节点</td></tr>
+        <tr><td class="pn">先开口型</td><td class="sg">开口就是期限</td><td class="ans">先说我的约束</td><td class="sg">范围与期限写下来</td></tr>
+        <tr><td class="pn">抬杠辩论型</td><td class="sg">「不这样怎么行」</td><td class="ans">先认前提再谈取舍</td><td class="sg">只谈事实和成本</td></tr>
+        <tr><td class="pn">越界熟人型</td><td class="sg">「亲戚问问怎么了」</td><td class="ans">这个不太方便聊</td><td class="sg">换话题，不解释</td></tr>
+        <tr><td class="pn">借力朋友型</td><td class="sg">「周转一下马上还」</td><td class="ans">大额给不了，小额可以</td><td class="sg">定金额、日期、方式</td></tr>
+        <tr><td class="pn">沉默回应型</td><td class="sg">已读不回</td><td class="ans">我这边周三要，先推进</td><td class="sg">换渠道并设截止</td></tr>
+        <tr><td class="pn">情绪表达型</td><td class="sg">「你根本不在乎我」</td><td class="ans">先接情绪再谈事</td><td class="sg">把话题挪到下一次</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ==================== 第一部分 ==================== -->
+<div class="part">
+  <div class="part-h"><span class="pn">1</span><span class="pt">开口表达</span></div>
+  <p class="part-sub">对应人格：甩手掌柜型 · 客气疏远型</p>
+
+  <!-- 正文 01 -->
+  <article class="ch" id="c1">
+    <div class="ck">第 01 节 · 本期正文</div>
+    <h2 class="ct">甩手掌柜型怎么接</h2>
+    <p class="cs">这一类人不是坏人，只是把「帮忙」的默认成本算在了别人头上。</p>
+
+    <div class="blk">
+      <div class="lbl"><span class="n">1</span>场景</div>
+      <p>下午四点，同事在群里发一句「这个表你顺手帮我填一下，我去开会」。你今天已经连着做完三件事，而这张表本来由他负责对接客户。</p>
+      <p>他没有说「请你帮个忙」，他说的是「顺手」，好像拒绝是一件费力的事。</p>
+    </div>
+
+    <div class="blk">
+      <div class="lbl"><span class="n">2</span>先判断什么</div>
+      <ul>
+        <li><span class="d"></span><span><b>这件事的归属是谁的？</b> 归属不清时，先划归属，再谈帮忙。顺序反了，后面所有话都会被当成讨价还价。</span></li>
+        <li><span class="d"></span><span><b>你今天手上有没有更硬的时间点？</b> 有交付在身时，你的拒绝不是懒，是有依据。</span></li>
+        <li><span class="d"></span><span><b>你要拒绝的是这件事，还是这个人？</b> 拒绝事可以直说，拒绝人会变成态度问题。</span></li>
+        <li><span class="d"></span><span><b>他是一次临时有事，还是习惯性甩？</b> 临时一次给台阶，长期如此就按流程说。</span></li>
+      </ul>
+    </div>
+
+    <div class="blk">
+      <div class="lbl"><span class="n">3</span>三种具体说法</div>
+
+      <div class="say">
+        <div class="sn">A</div>
+        <div class="st">
+          <div class="sh">对方是临时有事 · 给台阶</div>
+          <div class="sq">「这张表按分工是你在跟。我今天要交 A 客户的东西，实在排不开。你要是卡住了，我可以帮你看结构，填内容得你自己来。」</div>
+          <div class="sn2">适用：关系还行、以后还要一起干活；事情本身你顺手能搭一部分。</div>
+        </div>
+      </div>
+
+      <div class="say b2">
+        <div class="sn">B</div>
+        <div class="st">
+          <div class="sh">对方习惯性甩 · 定流程</div>
+          <div class="sq">「下次这类直接派给我，别转手落到我这儿，我接不住。这张表还是你自己跟，填完发群里我帮你看一眼。」</div>
+          <div class="sn2">适用：同类事情已经发生过几次；你需要让对方记住下次该怎么开口。</div>
+        </div>
+      </div>
+
+      <div class="say b3">
+        <div class="sn">C</div>
+        <div class="st">
+          <div class="sh">你手上更急 · 讲时间</div>
+          <div class="sq">「我这边今天排满了，接不了。你要是急着交，我帮你问下别人有没有空，别耽误你。」</div>
+          <div class="sn2">适用：对方的事也急，你不想把活揽过来，也不想看他耽误。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="blk">
+      <div class="lbl"><span class="n">4</span>对方继续劝说怎么回</div>
+      <ul>
+        <li><span class="d"></span><span>「大家都这么干啊。」→ 「我不是不干，是我这边有交付在身。你把优先级排一下，排得动我就接。」</span></li>
+        <li><span class="d"></span><span>「我就去开十分钟会。」→ 「那你开完自己填五分钟就行，框架我留给你了。」</span></li>
+        <li><span class="d"></span><span>「那你帮我跟客户说一声。」→ 「跟客户说可以，但那件事还是你负责，我只能搭个架子。」</span></li>
+      </ul>
+    </div>
+
+    <div class="blk">
+      <div class="lbl"><span class="n">5</span>今天能完成的小练习</div>
+      <div class="prac">
+        <ul>
+          <li><span class="d"></span><span>把今天手头的待办列出来，每一条标一个来源：<b>我自己的 / 别人推给我的 / 没人认领的</b>。</span></li>
+          <li><span class="d"></span><span>从「别人推给我的」里挑出<b>一件</b>，用本节的 A / B / C 写一句你下次要用的回话。</span></li>
+          <li><span class="d"></span><span>记住这个句式：<b>「这件事按分工归 X，我能帮的是 Y。」</b></span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="chfoot">
+      <a class="rbtn" href="#c7">下一节 · 越界熟人型怎么挡</a>
+    </div>
+  </article>
+
+  <div class="tbd" id="t2">
+    <div class="tt">02 客气疏远型怎么聊</div>
+    <div class="td">识别信号：所有回复都是「好的」「再看」「应该没问题」。<br>框架预告：<b>识别客气背后的距离 → 判断对方真正担心什么 → 用一条明确的时间承诺替代模糊回应 → 到点主动同步，不追问</b>。本节正文待展开。</div>
+  </div>
+
+  <div class="tbd" id="t3">
+    <div class="tt">03 开口前的三句话</div>
+    <div class="td">通用方法节：<b>把请求说成安排、把拒绝说成事实、把讨论说成选择</b>。本节正文待展开。</div>
+  </div>
+</div>
+
+<!-- ==================== 第三部分 ==================== -->
+<div class="part">
+  <div class="part-h"><span class="pn">3</span><span class="pt">守住边界</span></div>
+  <p class="part-sub">对应人格：越界熟人型 · 借力朋友型</p>
+
+  <!-- 正文 07 -->
+  <article class="ch" id="c7">
+    <div class="ck">第 07 节 · 本期正文</div>
+    <h2 class="ct">越界熟人型怎么挡</h2>
+    <p class="cs">这一类人不坏，甚至很热络。他们只是把「我们是一家人」当成通行证。</p>
+
+    <div class="blk">
+      <div class="lbl"><span class="n">1</span>场景</div>
+      <p>家庭聚餐，你大姨夹了一筷子菜，顺嘴问了一句「你一个月挣多少啊，听说你们这行挺挣钱的」。桌上还有五六个人。</p>
+      <p>问的时候是笑着问的。你要是板起脸，反而不像事儿；你要是说了个数，明天整个家族群都知道。</p>
+    </div>
+
+    <div class="blk">
+      <div class="lbl"><span class="n">2</span>先判断什么</div>
+      <ul>
+        <li><span class="d"></span><span><b>对方问的是数字，还是想比较？</b> 多数情况是想比较，不是真想听你报数。</span></li>
+        <li><span class="d"></span><span><b>这是公开场合还是一对一？</b> 公开要护场面，一对一可以多说两句。</span></li>
+        <li><span class="d"></span><span><b>你说的话会不会被转述？</b> 有长辈在的场合，默认会被转述。</span></li>
+        <li><span class="d"></span><span><b>你想守住的是数字，还是「不想聊」这件事？</b> 守住「不想聊」比守住数字容易得多。</span></li>
+      </ul>
+    </div>
+
+    <div class="blk">
+      <div class="lbl"><span class="n">3</span>三种具体说法</div>
+
+      <div class="say">
+        <div class="sn">A</div>
+        <div class="st">
+          <div class="sh">对方只是一时好奇 · 岔开</div>
+          <div class="sq">「我们这行差别挺大的，具体的就不说了。对了妈，你那个排骨汤的做法发我了吗？我晚上想做。」</div>
+          <div class="sn2">适用：气氛轻松、你不想把饭桌弄僵；岔开要快，别停在这句上等人接。</div>
+        </div>
+      </div>
+
+      <div class="say b2">
+        <div class="sn">B</div>
+        <div class="st">
+          <div class="sh">关系还行、不追问到底 · 给轮廓</div>
+          <div class="sq">「够花，不富裕。奖金这些也不稳定，今年跟去年能差不少。」</div>
+          <div class="sn2">适用：对方是关系尚可的长辈；给一个模糊轮廓比给一个精确数字安全。</div>
+        </div>
+      </div>
+
+      <div class="say b3">
+        <div class="sn">C</div>
+        <div class="st">
+          <div class="sh">对方已经问过好几次 · 说明立场</div>
+          <div class="sq">「这事我一般不聊，不是跟您见外，就是聊了也没意思，您就当我闷头挣口饭吃。」</div>
+          <div class="sn2">适用：对方比较固执；把立场说清，不要留给对方「再问一次也许就说了」的错觉。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="blk">
+      <div class="lbl"><span class="n">4</span>对方继续劝说怎么回</div>
+      <ul>
+        <li><span class="d"></span><span>「说说呗，又不外人。」→ 「正因为是一家人，我才不想让您替我操心。您就当我闷头挣饭钱吧。」</span></li>
+        <li><span class="d"></span><span>「你弟挣得比你多吧？」→ 「每个人的情况不一样，我不跟人比这个。」</span></li>
+        <li><span class="d"></span><span>当着别人追问 → 先看住场面：「××姨，」接一句玩笑，再把话递给身边更熟的人，让聊天自然挪走。</span></li>
+        <li><span class="d"></span><span>回去之后单独来问 → 「表姨，刚才人多我没细说，钱的事我不方便聊，不是跟您见外。」</span></li>
+      </ul>
+    </div>
+
+    <div class="blk">
+      <div class="lbl"><span class="n">5</span>今天能完成的小练习</div>
+      <div class="prac">
+        <ul>
+          <li><span class="d"></span><span>写下你被问过的三个版本：<b>工资、收入、存款</b>。给每个写一句不超过 20 字的回话。</span></li>
+          <li><span class="d"></span><span>挑一句念出声，念三遍，念到不打结为止。饭桌上想不出句子，多半是因为没练过。</span></li>
+          <li><span class="d"></span><span>给岔开那句话配一个<b>具体去处</b>（谁家的菜谱、谁的近况），不要说「说点别的的」这种空话。</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="chfoot">
+      <a class="rbtn" href="#c8">下一节 · 借力朋友型怎么拒</a>
+    </div>
+  </article>
+
+  <!-- 正文 08 -->
+  <article class="ch" id="c8">
+    <div class="ck">第 08 节 · 本期正文</div>
+    <h2 class="ct">借力朋友型怎么拒</h2>
+    <p class="cs">这一类特别难处理：关系是真的，事也是真的，只是时间点或金额对不上。</p>
+
+    <div class="blk">
+      <div class="lbl"><span class="n">1</span>场景</div>
+      <p>关系很好的朋友发消息说周转一下，要五万，说下个月就还。他知道你去年换过车，也知道你这段日子在攒首付。</p>
+      <p>他说的是「周转」，不是「借」。「周转」这两个字听着像生意上的事，听着就不像是要还的。</p>
+    </div>
+
+    <div class="blk">
+      <div class="lbl"><span class="n">2</span>先判断什么</div>
+      <ul>
+        <li><span class="d"></span><span><b>关系值多少，能力有多少？</b> 帮一次和帮到哪一步，是两件不同的事，能帮不代表要帮到这个数。</span></li>
+        <li><span class="d"></span><span><b>你的钱有没有已经许诺出去的地方？</b> 房贷、房租、给家里定的钱先划走，剩下的才是能动的。</span></li>
+        <li><span class="d"></span><span><b>这笔钱还得上吗？</b> 要问的不是人品，是时间点和来源。人品你信不信，日期和来源是另一回事。</span></li>
+        <li><span class="d"></span><span><b>拒绝会不会伤关系？</b> 把话说到位就不会，但说到位需要提前想好，而不是临场发挥。</span></li>
+      </ul>
+    </div>
+
+    <div class="blk">
+      <div class="lbl"><span class="n">3</span>三种具体说法</div>
+
+      <div class="say">
+        <div class="sn">A</div>
+        <div class="st">
+          <div class="sh">金额超出你的能力 · 给上限</div>
+          <div class="sq">「大额的我真给不了。你看我能拿出多少，你按这个算行不行，不够的那部分我们再想别的办法。」</div>
+          <div class="sn2">适用：关系值得帮，但这个数会伤到你；先给出真实上限，让对方去安排剩下的事。</div>
+        </div>
+      </div>
+
+      <div class="say b2">
+        <div class="sn">B</div>
+        <div class="st">
+          <div class="sh">你能出一部分 · 给方案不给全款</div>
+          <div class="sq">「我这边一时拿不出这么整的。要不我们一起凑，我出我那一份，剩下的你再周转一下，看还有没有别的门路。」</div>
+          <div class="sn2">适用：金额超出能力、但关系重要；共同承担比独自扛下更公平，也更好开口。</div>
+        </div>
+      </div>
+
+      <div class="say b3">
+        <div class="sn">C</div>
+        <div class="st">
+          <div class="sh">金额不大但要控风险 · 给条件</div>
+          <div class="sq">「我可以借你一部分，但要分几次还，日期定下来，写清楚。」</div>
+          <div class="sn2">适用：金额不大、但含糊过去容易变成长期人情债；把还款方式先谈死，是给关系留余地。</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="blk">
+      <div class="lbl"><span class="n">4</span>对方继续劝说怎么回</div>
+      <ul>
+        <li><span class="d"></span><span>「你手头肯定还有。」→ 「我手头的钱都有去处，房贷房租先扣掉，剩下能动的就是这个数。」</span></li>
+        <li><span class="d"></span><span>「就这一次，我下个月一定还。」→ 「我还钱的顾虑不是信不过你，是想有个日子，这样我们俩都轻松。」</span></li>
+        <li><span class="d"></span><span>「你帮我也等于帮我自己。」→ 「帮你可以，但帮到什么程度我得给自己留余地，这也是为咱们的关系着想。」</span></li>
+        <li><span class="d"></span><span>「我这是真出事了。」→ 「出事我信。我们先按我能给的数走，你那边再想别的，两边都不耽误。」</span></li>
+      </ul>
+    </div>
+
+    <div class="blk">
+      <div class="lbl"><span class="n">5</span>今天能完成的小练习</div>
+      <div class="prac">
+        <ul>
+          <li><span class="d"></span><span>算一次你的<b>可动上限</b>：手头零钱 − 未来三个月的固定支出 = 这个数就是你的底线。</span></li>
+          <li><span class="d"></span><span>把还款方式写成三个要素：<b>金额、日期、方式</b>。能说清这三样，话就说得住了。</span></li>
+          <li><span class="d"></span><span>提前写好一句开场：<b>「在我说行不行之前，先跟你说清楚我这边的情况。」</b> 用它把话题从「帮不帮」挪到「帮多少」。</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="chfoot">
+      <a class="rbtn" href="#quick">回到场景速查表</a>
+    </div>
+  </article>
+
+  <div class="tbd" id="t9">
+    <div class="tt">09 拒绝之后的收尾</div>
+    <div class="td">通用方法节：<b>拒绝之后不要自行加码补救 · 用一句中性事实结束话题 · 需要时给一个替代路径 · 不解释的理由可以不解释</b>。本节正文待展开。</div>
+  </div>
+</div>
+
+<!-- ==================== 其余部分（目录框架） ==================== -->
+<div class="part">
+  <div class="part-h"><span class="pn">2</span><span class="pt">日常协作</span></div>
+  <p class="part-sub">对应人格：先开口型 · 抬杠辩论型</p>
+  <div class="tbd" id="t4">
+    <div class="tt">04 先开口型怎么应</div>
+    <div class="td">识别信号：开口就是需求、期限和默认答案。框架预告：<b>先接需求再谈约束 · 把「能不能做」换成「做到哪一步」 · 把口头期限落成文字 · 给一个可以确认的版本</b>。本节正文待展开。</div>
+  </div>
+  <div class="tbd" id="t5">
+    <div class="tt">05 抬杠辩论型怎么接</div>
+    <div class="td">识别信号：什么都要辩一句，赢了就翻篇。框架预告：<b>先认前提再谈取舍 · 把他拉回目标和成本 · 不接无效比喻 · 给一个可执行的下一步</b>。本节正文待展开。</div>
+  </div>
+  <div class="tbd" id="t6">
+    <div class="tt">06 对齐与回话节奏</div>
+    <div class="td">通用方法节：<b>什么时候该回话 · 什么时候该不急着回 · 怎么留一条记录 · 什么时候该升级到书面</b>。本节正文待展开。</div>
+  </div>
+</div>
+
+<div class="part">
+  <div class="part-h"><span class="pn">4</span><span class="pt">遇到分歧</span></div>
+  <p class="part-sub">对应人格：沉默回应型 · 情绪表达型</p>
+  <div class="tbd" id="t10">
+    <div class="tt">10 沉默回应型怎么追</div>
+    <div class="td">识别信号：已读不回，久了就当没这回事。框架预告：<b>分清已读没回和没看到 · 追进展不追回复 · 给两个选项省掉对方的打字成本 · 换路径拿答案 · 设一个截止点</b>。本节正文待展开。</div>
+  </div>
+  <div class="tbd" id="t11">
+    <div class="tt">11 情绪表达型怎么接</div>
+    <div class="td">识别信号：先要你回应情绪，再谈事情。框架预告：<b>先接情绪不辩事实 · 用「我听见了」代替「但是」 · 把讨论挪到下一个时间点 · 事后补一句确认</b>。本节正文待展开。</div>
+  </div>
+  <div class="tbd" id="t12">
+    <div class="tt">12 分歧之后的复盘</div>
+    <div class="td">通用方法节：<b>事后再复盘，不在当场复盘 · 只看机制不看人品 · 找出下一次可以提前做的一件事</b>。本节正文待展开。</div>
+  </div>
+</div>
+
+<section id="howto" style="margin-top:34px">
+  <div class="card">
+    <div class="kicker">本期交付说明</div>
+    <p style="font-size:14.5px;color:#4B5C58;line-height:1.8;margin-top:8px">
+      本期提供：<b>4 部分 12 节目录</b> + <b>第 01 / 07 / 08 三节正文</b> + <b>1 张场景速查表</b> + <b>8 类人格一览</b>。<br>
+      标注「框架」的章节已列出识别信号和处理思路，正文待后续补充。目录结构不会再变，后续加节时链接保持可用。
+    </p>
+    <div class="rule"></div>
+    <p class="muted">本手册是沟通参考与自我观察工具，不构成专业心理评估、诊断或医疗建议。<br>涉及人身安全、暴力或严重冲突的情况，请联系专业机构处理。</p>
+  </div>
+</section>
+
+<p class="foot">社交相处说明书 · 8 类人格的相处指南<br>先判断，再开口 —— 顺序对了，话就顺了。</p>
+
+</div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+  var toastEl=document.getElementById('toast'),t=null;
+  function toast(m){toastEl.textContent=m;toastEl.classList.add('on');clearTimeout(t);t=setTimeout(function(){toastEl.classList.remove('on')},1700);}
+  /* 目录高亮：滚动时标记当前章节 */
+  var links=[].slice.call(document.querySelectorAll('.side a[href^="#"], .mchip[href^="#"]'));
+  var targets=links.map(function(a){return document.querySelector(a.getAttribute('href'));}).filter(Boolean);
+  function sync(){
+    var y=window.scrollY+140,cur=null;
+    for(var i=0;i<targets.length;i++){if(targets[i].offsetTop<=y)cur=targets[i].id;}
+    for(var j=0;j<links.length;j++){
+      var id=links[j].getAttribute('href').slice(1);
+      links[j].classList.toggle('on',id===cur);
+    }
+  }
+  var ticking=false;
+  window.addEventListener('scroll',function(){
+    if(!ticking){window.requestAnimationFrame(function(){sync();ticking=false});ticking=true}
+  },{passive:true});
+  sync();
+  /* 目录点击：桌面端平滑滚动并修正吸顶偏移 */
+  document.addEventListener('click',function(e){
+    var a=e.target.closest?e.target.closest('a[href^="#"]'):null;
+    if(!a)return;
+    var id=a.getAttribute('href').slice(1);
+    var el=document.getElementById(id);
+    if(!el)return;
+    e.preventDefault();
+    var top=el.getBoundingClientRect().top+window.scrollY-56;
+    window.scrollTo({top:top,behavior:'smooth'});
+    history.replaceState(null,'','#'+id);
+  });
+})();
+</script>
+</body>
+</html>
